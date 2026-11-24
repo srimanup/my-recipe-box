@@ -1,0 +1,21 @@
+<div class="recipe">
+  <h2 class="recipe-name">{{ activeRecipe().name }}</h2>
+  <h3 class="recipe-description">{{ activeRecipe().description }}</h3>
+  <img class="recipe-image" [src]="activeRecipe().imgUrl" [alt]="activeRecipe().name" />
+  <ul class="recipe-ingredients-list">
+    @for (ingredient of adjustedIngredients(); track ingredient.name) {
+      <li class="recipe-ingredients">
+        <div>{{ ingredient.name }}</div>
+        <div>:</div>
+        <div>{{ ingredient.quantity }} {{ ingredient.unit }}</div>
+      </li>
+    }
+  </ul>
+
+  <div class="servings-counter">
+    Servings:
+    <button [disabled]="servings() < 2" (click)="decreaseServings()">-</button>
+    {{ servings() }}
+    <button (click)="increaseServings()">+</button>
+  </div>
+</div>
