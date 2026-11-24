@@ -1,0 +1,30 @@
+@if (recipeNumber() > -1) {
+  <div>
+    <h2>{{ activeRecipe().name }}</h2>
+    <h3>{{ activeRecipe().description }}</h3>
+    <img [src]="activeRecipe().imgUrl" [alt]="activeRecipe().name" />
+    <ul>
+      @for (ingredient of adjustedIngredients(); track ingredient.name) {
+        <li>{{ ingredient.name }} : {{ ingredient.quantity }} {{ ingredient.unit }}</li>
+      }
+    </ul>
+
+    <div>
+      Servings:
+      <button [disabled]="servings() < 2" (click)="decreaseServings()">-</button>
+      {{ servings() }}
+      <button (click)="increaseServings()">+</button>
+    </div>
+  </div>
+} @else {
+  <h2>Welcome to my recipe book</h2>
+}
+
+<br />
+
+<button [disabled]="recipeNumber() < 0" (click)="prevRecipe()">Prev</button>
+<button [disabled]="recipeNumber() === nRecipes - 1" (click)="nextRecipe()">Next</button>
+<!-- 
+  <button (click)="onCook()">Cook</button>
+  <button (click)="onEat()">Eat</button>
+  <button (click)="onReset()">Reset</button> -->
