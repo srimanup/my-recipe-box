@@ -5,7 +5,8 @@ export const MOCK_RECIPES: RecipeModel[] = [
     id: 1,
     name: 'Spaghetti Carbonara',
     description: 'A classic Italian pasta dish.',
-    imgUrl: '/assets/img/spaghetti-carbonara.jpg',
+    imgUrl: '/assets/img/spaghetti-carbonara.jpg', // your existing value
+    isFavorite: true,
     ingredients: [
       { name: 'Spaghetti', quantity: 200, unit: 'g' },
       { name: 'Guanciale', quantity: 100, unit: 'g' },
@@ -18,7 +19,8 @@ export const MOCK_RECIPES: RecipeModel[] = [
     id: 2,
     name: 'Caprese Salad',
     description: 'A simple and refreshing Italian salad.',
-    imgUrl: '/assets/img/caprese-salad.jpg',
+    imgUrl: '/assets/img/caprese-salad.jpg', // your existing value
+    isFavorite: false,
     ingredients: [
       { name: 'Tomatoes', quantity: 4, unit: 'each' },
       { name: 'Fresh Mozzarella', quantity: 200, unit: 'g' },

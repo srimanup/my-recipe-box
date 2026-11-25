@@ -7,10 +7,28 @@
   padding: 20px;
 }
 
+.recipe-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .recipe-name {
   color: #455230;
   font-size: 40px;
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.recipe-fav-icon {
+  color: crimson;
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+
+  -webkit-text-stroke: 1px black;
+  float: right;
 }
 
 .recipe-description {

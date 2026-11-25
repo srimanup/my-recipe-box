@@ -1,5 +1,10 @@
 <div class="recipe">
-  <h2 class="recipe-name">{{ activeRecipe().name }}</h2>
+  <div class="recipe-title">
+    <h2 class="recipe-name">{{ activeRecipe().name }}</h2>
+    @if (activeRecipe().isFavorite) {
+      <mat-icon fontSet="material-symbols-rounded" class="recipe-fav-icon">favorite</mat-icon>
+    }
+  </div>
   <h3 class="recipe-description">{{ activeRecipe().description }}</h3>
   <img class="recipe-image" [src]="activeRecipe().imgUrl" [alt]="activeRecipe().name" />
   <ul class="recipe-ingredients-list">

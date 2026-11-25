@@ -1,8 +1,10 @@
 import { Component, computed, input, signal } from '@angular/core';
 import { RecipeModel } from '../models';
 
+import { MatIconModule } from '@angular/material/icon';
+
 @Component({
-  imports: [],
+  imports: [MatIconModule],
   selector: 'app-recipe-detail',
   styleUrl: './recipe-detail.css',
   templateUrl: './recipe-detail.html',
